@@ -16,7 +16,7 @@ public class Estudiante
         apellidos = _apellidos;
         direccion = _direccion;
 
-        for (int i = 0; i < 3 && i < _telefonos.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
             telefonos[i] = _telefonos[i];
         }
