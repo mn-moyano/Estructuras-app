@@ -1,26 +1,34 @@
 //Tarea Semana 3
 using System.Runtime.CompilerServices;
 
-public class Asignatura
+public class Estudiante
 {
-    private string nombre;
-    private double[] notas;
+    private string id;
+    private string nombres;
+    private string apellidos;
+    private string direccion;
+    private string[] telefonos = new string[3];
     //genero el constructor
-    public Asignatura(string _nombre, double[] _notas)
+    public Estudiante(string _id, string _nombres, string _apellidos, string _direccion, string[] _telefonos)
     {
-        nombre = _nombre;
-        notas = new double[3];
-        notas = _notas;
+        id = _id;
+        nombres = _nombres;
+        apellidos = _apellidos;
+        direccion = _direccion;
+        telefonos = new string[3];
+        telefonos = _telefonos;
     }
 
-    public string getAsignatura()
+    public string getEstudiante()
     {
-        return nombre;
+        return id;
     }
 
-    public double[] getNotas()
+    public string[] getTelefonos()
     {
-        return notas;
+        return telefonos;
     }
 }
+
+    
 
