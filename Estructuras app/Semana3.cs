@@ -15,13 +15,16 @@ public class Estudiante
         nombres = _nombres;
         apellidos = _apellidos;
         direccion = _direccion;
-        telefonos = new string[3];
-        telefonos = _telefonos;
+
+        for (int i = 0; i < 3 && i < _telefonos.Length; i++)
+        {
+            telefonos[i] = _telefonos[i];
+        }
     }
 
     public string getEstudiante()
     {
-        return id;
+        return $"Estudiante : {id}\nNombres: {nombres}\nApellidos: {apellidos}\nDirección: {direccion}";
     }
 
     public string[] getTelefonos()
