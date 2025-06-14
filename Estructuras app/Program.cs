@@ -26,6 +26,6 @@ System.Console.WriteLine(estudiante.getEstudiante());
 System.Console.WriteLine(estudiante.getTelefonos());
 
 string[] telefonos = estudiante.getTelefonos();
-System.Console.WriteLine(telefonos[0]);
-System.Console.WriteLine(telefonos[1]);
-System.Console.WriteLine(telefonos[2]);
+System.Console.WriteLine("El teléfono 1 es: " + telefonos[0]);
+System.Console.WriteLine("El teléfono 2 es: " + telefonos[1]);
+System.Console.WriteLine("El teléfono 3 es: " + telefonos[2]);

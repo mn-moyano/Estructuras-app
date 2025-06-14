@@ -1,13 +1,14 @@
 //Tarea Semana 3
 using System.Runtime.CompilerServices;
 
-public class Estudiante
+public class Estudiante //Crear la clase estudiante y sus datos
 {
     private string id;
     private string nombres;
     private string apellidos;
     private string direccion;
     private string[] telefonos = new string[3];
+
     //genero el constructor
     public Estudiante(string _id, string _nombres, string _apellidos, string _direccion, string[] _telefonos)
     {
