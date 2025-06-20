@@ -1,9 +1,17 @@
 ﻿//Crear funciones para calcular el área y el perímetro de dos figuras geométricas (Rectángulo y Círculo)
 //CalcularArea es una función que devuelve un valor double, se utiliza para calcular el área del rectángulo donde se requiere datos como base y altura. También se utiliza para calcular el área del círculo y se requiere el radio
+using System.Diagnostics;
+
 Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
 Console.WriteLine("=============================\n");
 System.Console.WriteLine();
 
+string[] telf = new string[2];
+telf[0] = "0997859163";
+telf[1] = "0989586485";
+
+clsEstudiante estudiante = new clsEstudiante();
+clsEstudiante estudiante1 = new clsEstudiante("123", "Juana", telf);
 
 
 //Cálculo de área y perímetro de rectángulo y círculo
