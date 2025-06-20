@@ -6,12 +6,25 @@ Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
 Console.WriteLine("=============================\n");
 System.Console.WriteLine();
 
-string[] telf = new string[2];
-telf[0] = "0997859163";
-telf[1] = "0989586485";
+System.Console.WriteLine("Listado de Estudiantes");
 
-clsEstudiante estudiante = new clsEstudiante();
-clsEstudiante estudiante1 = new clsEstudiante("123", "Juana", telf);
+clsEstudiante[] estudiantes = new clsEstudiante[10];
+
+
+
+
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(estudiantes[i].getNombre());
+}
+
+// string[] telf = new string[2];
+// telf[0] = "0997859163";
+// telf[1] = "0989586485";
+
+// clsEstudiante estudiante = new clsEstudiante();
+// clsEstudiante estudiante1 = new clsEstudiante("123", "Juana", telf);
 
 
 //Cálculo de área y perímetro de rectángulo y círculo

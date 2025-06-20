@@ -12,4 +12,8 @@ public class clsEstudiante
         nombre = _nombre;
         telefono = _telefonos;
     }
+    public string getNombre()
+    {
+        return nombre;
+    }
 }
