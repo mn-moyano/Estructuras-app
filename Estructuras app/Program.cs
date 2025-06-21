@@ -10,10 +10,21 @@ System.Console.WriteLine();
 System.Console.WriteLine("Listado de Estudiantes");
 System.Console.WriteLine("======================");
 
-clsEstudiante estudiante = new clsEstudiante("Madelyn", 23, 3);
+int max = 10;
+//clsEstudiante estudiante = new clsEstudiante("Madelyn", 23, 3);
 
-// clsEstudiante[] estudiantes = new clsEstudiante[10];
+clsEstudiante[] estudiantes = new clsEstudiante[10];
 
+clsEstudiante estudiante1 = new clsEstudiante("José", 23, 25);
+clsEstudiante estudiante2 = new clsEstudiante("María", 25, 28);
+estudiantes[0] = estudiante1;
+estudiantes[1] = estudiante2;
+
+//Recorrido del array
+// for (int i = 0; i < max; i++) ;
+// {
+//     System.Console.WriteLine(estudiantes[i].Nombre);
+// }
 
 
 
