@@ -19,6 +19,8 @@ clsEstudiante[] estudiantes = new clsEstudiante[max];
 //Crear algunos estudiantes
 clsEstudiante estudiante1 = new clsEstudiante("José", 23, 25);
 clsEstudiante estudiante2 = new clsEstudiante("María", 25, 28);
+
+//Insertar en el arreglo
 estudiantes[0] = estudiante1;
 estudiantes[1] = estudiante2;
 
@@ -42,7 +44,7 @@ continuar = true;
 bool encontrado = false;
 string consulta = "María";
 
-i = 0;
+i = 0; // reiniciar índice
 while (continuar)
 {
     if (estudiantes[i] != null)
@@ -52,21 +54,26 @@ while (continuar)
             encontrado = true;
             continuar = false;
         }
-        i++;
+        else
+        {
+            i++;
+        }
+
     }
     else
     {
         continuar = false;
     }
-    if (encontrado)
-    {
-        System.Console.WriteLine("Estudiante " + consulta + " encontrado.");
-    }
-    else
-    {
-        System.Console.WriteLine("Estudiante " + consulta + " no encontrado");
-    }
 }
+if (encontrado)
+{
+    System.Console.WriteLine("Estudiante " + consulta + " encontrado.");
+}
+else
+{
+    System.Console.WriteLine("Estudiante " + consulta + " no encontrado");
+}
+
 //Recorrido del array
 // for (int i = 0; i < max; i++) ;
 // {
