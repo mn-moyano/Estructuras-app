@@ -7,18 +7,21 @@ Console.WriteLine("=============================\n");
 System.Console.WriteLine();
 
 
- System.Console.WriteLine("Listado de Estudiantes");
+System.Console.WriteLine("Listado de Estudiantes");
+System.Console.WriteLine("======================");
 
-clsEstudiante[] estudiantes = new clsEstudiante[10];
+clsEstudiante estudiante = new clsEstudiante("Madelyn", 23, 3);
+
+// clsEstudiante[] estudiantes = new clsEstudiante[10];
 
 
 
 
 
-for (int i = 0; i < 10; i++)
-{
-    Console.WriteLine(estudiantes[i].getNombre());
- }
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(estudiantes[i].getNombre());
+//  }
 
 // string[] telf = new string[2];
 // telf[0] = "0997859163";

@@ -2,13 +2,24 @@ using System.ComponentModel;
 
 public class clsEstudiante
 {
-    private string Nombre;
-    public void SetNombre(string _nombre)
+    public string Nombre { get; set; }
+    public double Largo { get; set; }
+    public int Edad { get; set; }
+
+    //Constructor
+    public clsEstudiante(string _nombre, double _largo, int _edad)
     {
         Nombre = _nombre;
+        Largo = _largo;
+        Edad = _edad;
     }
-    public string getNombre()
-    {
-        return Nombre;
-    }
+    // private string Nombre;
+    // public void SetNombre(string _nombre)
+    // {
+    //     Nombre = _nombre;
+    // }
+    // public string getNombre()
+    // {
+    //     return Nombre;
+    // }
 }
