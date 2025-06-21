@@ -28,7 +28,7 @@ while (continuar)
 {
     if (estudiantes[i] != null) //boolean
     {
-        System.Console.WriteLine("Nombre: " + estudiantes[i].Nombre + "Edad: " + estudiantes[i].Edad);
+        System.Console.WriteLine("Nombre: " + estudiantes[i].Nombre + " Edad: " + estudiantes[i].Edad);
         i++;
     }
     else
@@ -36,6 +36,7 @@ while (continuar)
         continuar = false;
     }
 }
+
 continuar = true;
 bool encontrado = false;
 
