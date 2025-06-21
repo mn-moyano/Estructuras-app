@@ -26,7 +26,10 @@ estudiantes[1] = estudiante2;
 //     System.Console.WriteLine(estudiantes[i].Nombre);
 // }
 
-
+foreach (var item in estudiantes)
+{
+    System.Console.WriteLine(item.Nombre);
+}
 
 
 // for (int i = 0; i < 10; i++)
