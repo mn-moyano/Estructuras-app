@@ -11,6 +11,7 @@ System.Console.WriteLine("Listado de Estudiantes");
 System.Console.WriteLine("======================");
 
 int max = 10;
+
 //clsEstudiante estudiante = new clsEstudiante("Madelyn", 23, 3);
 
 clsEstudiante[] estudiantes = new clsEstudiante[10];
@@ -20,16 +21,50 @@ clsEstudiante estudiante2 = new clsEstudiante("María", 25, 28);
 estudiantes[0] = estudiante1;
 estudiantes[1] = estudiante2;
 
+//imprimir el vector
+bool continuar = true;
+int i = 0;
+while (continuar)
+{
+    if (estudiantes[i] != null) //boolean
+    {
+        System.Console.WriteLine("Nombre: " + estudiantes[i].Nombre + "Edad: " + estudiantes[i].Edad);
+        i++;
+    }
+    else
+    {
+        continuar = false;
+    }
+}
+continuar = true;
+bool encontrado = false;
+
+string consulta = "María";
+while (continuar)
+{
+    if (estudiantes[i] != null)
+    {
+        if (estudiantes[i].Nombre == consulta)
+        {
+            encontrado = true;
+        }
+        i++;
+    }
+    else
+    {
+        continuar = false;
+    }
+}
 //Recorrido del array
 // for (int i = 0; i < max; i++) ;
 // {
 //     System.Console.WriteLine(estudiantes[i].Nombre);
 // }
 
-foreach (var item in estudiantes)
-{
-    System.Console.WriteLine(item.Nombre);
-}
+// foreach (var item in estudiantes)
+// {
+//     System.Console.WriteLine(item.Nombre);
+// }
 
 
 // for (int i = 0; i < 10; i++)
