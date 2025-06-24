@@ -41,3 +41,37 @@ while (continuar)
 }
 
 //Buscar turno por cédula
+continuar = true;
+bool encontrado = false;
+string cedulaConsulta = "2300048952";
+
+//Reiniciar indice
+i = 0;
+while (continuar)
+{
+    if (turnos[i] != null)
+    {
+        if (turnos[i].paciente.Cedula == cedulaConsulta)
+        {
+            encontrado = true;
+            continuar = false;
+        }
+        else
+        {
+            i++;
+        }
+    }
+    else
+    {
+        continuar = false;
+    }
+}
+
+if (encontrado)
+{
+    System.Console.WriteLine("Turno encontrado");
+}
+else
+{
+    System.Console.WriteLine("Turno no encontrado");
+}
