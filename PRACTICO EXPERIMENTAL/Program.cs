@@ -10,3 +10,34 @@ Paciente paciente1 = new Paciente("1708402449", "Rodrigo", 58);
 Paciente paciente2 = new Paciente("1201524856", "Rosa", 25);
 Paciente paciente3 = new Paciente("2300048952", "Madelyn", 28);
 
+Turno turno1 = new Turno(paciente1, "2025-07-10 9:00");
+Turno turno2 = new Turno(paciente2, "2025-07-12 14:00");
+Turno turno3 = new Turno(paciente3, "2025-07-12 16:30");
+
+//Insertar en el arreglo
+turnos[0] = turno1;
+turnos[1] = turno2;
+turnos[2] = turno3;
+
+//Mostrar los turnos
+System.Console.WriteLine();
+System.Console.WriteLine("Listado de Turnos");
+System.Console.WriteLine("=================");
+
+bool continuar = true;
+int i = 0;
+
+while (continuar)
+{
+    if (turnos[i] != null)
+    {
+        System.Console.WriteLine("Paciente: " + turnos[i].paciente.Nombre + " Cedula: " + turnos[i].paciente.Cedula + " Edad: " + turnos[i].paciente.Edad + " Fecha y Hora: " + turnos[i].FechaHora);
+        i++;
+    }
+    else
+    {
+        continuar = false;
+    }
+}
+
+//Buscar turno por cédula
