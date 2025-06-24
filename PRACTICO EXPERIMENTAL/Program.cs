@@ -40,6 +40,9 @@ while (continuar)
     }
 }
 
+System.Console.WriteLine();
+System.Console.WriteLine("Turno buscado");
+System.Console.WriteLine("=============");
 //Buscar turno por cédula
 continuar = true;
 bool encontrado = false;
@@ -69,9 +72,9 @@ while (continuar)
 
 if (encontrado)
 {
-    System.Console.WriteLine("Turno encontrado");
+    System.Console.WriteLine("Turno para la cédula " + cedulaConsulta + " encontrado.");
 }
 else
 {
-    System.Console.WriteLine("Turno no encontrado");
+    System.Console.WriteLine("Turno para la cédula " + cedulaConsulta + " no encontrado.");
 }
