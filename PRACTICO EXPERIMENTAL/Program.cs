@@ -4,28 +4,29 @@
 using System.Collections.Concurrent;
 using System.Net.WebSockets;
 
-class Paciente
+public class Paciente
 {
     public string Cedula;
     public string Nombre;
     public int Edad;
 
     //Método para mostrar los datos del paciente
-    public void MostrarDatos()
+    public Paciente(string _cedula, string _nombre, int _edad)
     {
-        System.Console.WriteLine($"Cédula: {Cedula}, Nombre: {Nombre}, Edad: {Edad}");
+        Cedula = _cedula;
+        Nombre = _nombre;
+        Edad = _edad;
     }
 }
 
-class turno
+public class Turno
 {
     public Paciente paciente; //Quiere decir que un turno contiene a un paciente
     public string FechaHora; //Fecha y hora del turno
-    public void MostrarTurno() //Muestra los datos completos del turno
+    public Turno(Paciente _paciente, string fechaHora) //Muestra los datos completos del turno
     {
-        System.Console.WriteLine("====Turno====");
-        paciente.MostrarDatos();
-        System.Console.WriteLine($"Fecha y hora del turno: {FechaHora}");
+        paciente = _paciente;
+        FechaHora = fechaHora;
     }
 }
 
