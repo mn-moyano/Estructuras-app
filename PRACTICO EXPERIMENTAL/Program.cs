@@ -20,10 +20,6 @@ turnos[1] = turno2;
 turnos[2] = turno3;
 
 //Mostrar los turnos
-System.Console.WriteLine();
-System.Console.WriteLine("Listado de Turnos");
-System.Console.WriteLine("=================");
-
 bool continuar = true;
 int i = 0;
 
