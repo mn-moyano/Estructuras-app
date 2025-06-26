@@ -13,6 +13,15 @@ public class AgendaTurnos
 
     public void ImprimirTurnos()
     {
-        
+        System.Console.WriteLine("Agenda de Turnos");
+        System.Console.WriteLine("================");
+
+        for (int i = 0; i < Turnos.Length; i++)
+        {
+            if (Turnos[i] != null)
+            {
+                System.Console.WriteLine("Turno asignado a: " + Turnos[i].Nombre + Turnos[i].Cedula + Turnos[i].Edad);
+            }
+        }
     }
 }    
