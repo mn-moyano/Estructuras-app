@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+
 public class AgendaTurnos
 {
     public Paciente[] Turnos { get; set; }
@@ -23,5 +25,35 @@ public class AgendaTurnos
                 System.Console.WriteLine("Turno asignado a: " + Turnos[i].Nombre + Turnos[i].Cedula + Turnos[i].Edad);
             }
         }
+    }
+
+    public void BuscarCedula(string cedula)
+    {
+        System.Console.WriteLine();
+        System.Console.WriteLine("Búsqueda de Paciente por Cédula");
+        System.Console.WriteLine("===============================");
+        if (encontrar(cedula))
+        {
+            System.Console.WriteLine("El registro ha sido encontrado");
+        }
+        else
+        {
+            System.Console.WriteLine("Registro no encontrado");
+        }
+    }
+    private bool encontrar(string Nombre)
+    {
+        bool encontrado = true;
+        for (int i = 0; i < Turnos.Length; i++)
+        {
+            if (Turnos[i] != null)
+            {
+                if (Nombre == Turnos[i].Nombre)
+                {
+                    encontrado = false;
+                }
+            }
+        }
+        return encontrado;
     }
 }    
