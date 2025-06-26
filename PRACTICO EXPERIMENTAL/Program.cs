@@ -16,3 +16,7 @@ agenda.AgendarTurno(paciente3, 2);
 
 //Imprimir agenda
 agenda.ImprimirTurnos();
+
+//Búsqueda por Cédula
+System.Console.WriteLine();
+agenda.BuscarCedula("2300048952");
