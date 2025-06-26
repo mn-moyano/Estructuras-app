@@ -22,7 +22,7 @@ public class AgendaTurnos
         {
             if (Turnos[i] != null)
             {
-                System.Console.WriteLine("Turno asignado a: " + Turnos[i].Nombre + Turnos[i].Cedula + Turnos[i].Edad);
+                System.Console.WriteLine($"Turno asignado a ==> Paciente: {Turnos[i].Nombre}, Cédula: {Turnos[i].Cedula}, Edad: {Turnos[i].Edad}");
             }
         }
     }
