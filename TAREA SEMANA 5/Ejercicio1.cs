@@ -1,3 +1,4 @@
+//Crear una lista de asignaturas y mostrar con el mensaje de Yo estudio + asignatura.
 public class Asignaturas
 {
     public void Ejecutar()
@@ -11,5 +12,5 @@ public class Asignaturas
         {
             System.Console.WriteLine("Yo estudio " + asigantura);
         }
-    } 
+    }
 }
