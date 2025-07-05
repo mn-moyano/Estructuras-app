@@ -36,7 +36,7 @@ public class ListaEnlazada
         Nodo actual = Cabeza;
         while (actual != null)
         {
-            System.Console.WriteLine(actual.Dato + " -> ");
+            System.Console.Write(actual.Dato + " -> ");
             actual = actual.Siguiente;
         }
         System.Console.WriteLine("null");

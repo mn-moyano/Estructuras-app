@@ -11,3 +11,14 @@ for (int i = 0; i < 50; i++)
 
 System.Console.WriteLine("Lista inicial");
 lista.Mostrar();
+
+System.Console.WriteLine("Ingrese el valor mínimo del rango: ");
+int minimo = int.Parse(Console.ReadLine());
+
+System.Console.WriteLine("Ingrese el valor máximo del rango: ");
+int maximo = int.Parse(Console.ReadLine());
+
+lista.EliminarRango(minimo, maximo);
+
+System.Console.WriteLine("Lista 2: Luego de eliminar los Nodos fuera de rango ");
+lista.Mostrar(); 
