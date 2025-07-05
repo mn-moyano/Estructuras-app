@@ -52,7 +52,7 @@ public class ListaEnlazada2
         Nodo2 actual = Cabeza;
         ListaEnlazada2 encontrados = new ListaEnlazada2();
         int contador = 0;
-
+//Contar cuantas veces existe un dato en la lista
         while (actual != null)
         {
             if (actual.Dato == valorBuscado)
