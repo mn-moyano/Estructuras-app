@@ -30,18 +30,19 @@ lista.Mostrar();
 
 System.Console.WriteLine();
 //Crear el programa que ejecuta las acciones del ejercicio2
+//Crear la lista enlazada con números aleatorios
 ListaEnlazada2 lista2 = new ListaEnlazada2();
 Random rnd2 = new Random();
-
+//Llenar la lista
 for (int i = 0; i < 50; i++)
 {
     lista2.AgregarAlFinal(rnd2.Next(1, 1000));
 }
-
+//Mostrar la lista original
 System.Console.WriteLine("Lista 2 original: ");
 lista2.Mostrar();
-
+//Leer el valor a buscar desde el teclado
 System.Console.WriteLine("Ingrese un valor para buscar: ");
 int valor = int.Parse(Console.ReadLine());
-
+//Buscar el dato, contar cuantas veces está y devolver el valor encontrado o un mensaje que diga que el valor no fue encontrado
 ListaEnlazada2 encontrados = lista2.BuscarDatoLista(valor);
