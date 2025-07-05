@@ -1,4 +1,5 @@
 //Crear una lista enlazada con 50 números enteros, del 1 al 999 generados aleatoriamente.
+//Crear la clase Nodo
 public class Nodo
 {
     public int Dato;
@@ -11,6 +12,7 @@ public class Nodo
     }
 }
 
+//Crear la clase lista enlazada
 public class ListaEnlazada
 {
     public Nodo Cabeza;
@@ -31,6 +33,8 @@ public class ListaEnlazada
             actual.Siguiente = nuevo;
         }
     }
+
+    //Mostrar lista original
     public void Mostrar()
     {
         Nodo actual = Cabeza;
@@ -41,6 +45,8 @@ public class ListaEnlazada
         }
         System.Console.WriteLine("null");
     }
+
+//método para eliminar nodos fuera de un rango dado
     public void EliminarRango(int minimo, int maximo)
     {
         while (Cabeza != null && (Cabeza.Dato < minimo || Cabeza.Dato > maximo))
