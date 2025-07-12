@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System.Runtime.InteropServices;
+
+Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
+Console.WriteLine("=============================");
+System.Console.WriteLine();
+
+Parentesis.run();
