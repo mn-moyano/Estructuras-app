@@ -25,16 +25,16 @@ public class Parentesis //Crear clase principal
                     break;
                 }
 
-                char apertura = formula.Pop();
+                char apertura = formula.Pop(); //Extrae el último símbolo de apertura
 
-                if ((apertura == '(' && item != ')') || (apertura == '{' && item != '}') || (apertura == '[' && item != ']'))
+                if ((apertura == '(' && item != ')') || (apertura == '{' && item != '}') || (apertura == '[' && item != ']')) //Se comprueba si coinciden
                 {
                     balanceada = false;
                     break;
                 }
             }
         }
-
+// Si aún quedan símbolos sin cerrar, no está balanceada
         if (balanceada && formula.Count == 0)
         {
             System.Console.WriteLine("La expresión está correctamente balanceada");
