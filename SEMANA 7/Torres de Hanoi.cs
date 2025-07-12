@@ -13,7 +13,7 @@ public class TorresDeHanoi
     {
         int disco = origen.discos.Pop();
         discos.Push(disco);
-        System.Console.WriteLine("$Mover disco {disco} desde {origen.nombre} hacia {nombre}");
+        System.Console.WriteLine($"Mover disco {disco} desde {origen.nombre} hacia {nombre}");
     }
 
     public void Mostrar()
@@ -34,9 +34,9 @@ public class TorresDeHanoi
             torreA.discos.Push(i);
         }
         System.Console.WriteLine("Pasos para resolver las Torres de Hanoi: ");
+        System.Console.WriteLine("=========================================");
         MostrarTorres(torreA, torreB, torreC);
         Resolver(cantidadDiscos, torreA, torreB, torreC);
-        System.Console.WriteLine();
         System.Console.WriteLine("Estado final");
         MostrarTorres(torreA, torreB, torreC);
     }
