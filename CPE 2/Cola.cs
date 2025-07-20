@@ -1,9 +1,9 @@
 //Asignar 30 asientos en una atracción
-public class Colas
+public class Colas //Crear la clase colas
 {
     public static void run()
     {
-        Queue<string> personas = new Queue<string>();
+        Queue<string> personas = new Queue<string>(); //Agregar personas a la cola (máximo 30)
         const int maxAsientos = 30;
 
         System.Console.WriteLine("Simulación: Asigación de 30 asientos en orden de llegada.");
@@ -12,10 +12,10 @@ public class Colas
         int contador = 0;
         while (contador < maxAsientos)
         {
-            System.Console.WriteLine($"Visitante #{contador + 1}: ");
-            string nombre = Console.ReadLine();
+            System.Console.WriteLine($"Visitante #{contador + 1}: "); //Número de visitante
+            string nombre = Console.ReadLine(); //Ingresar nombre desde la consola
 
-            if (nombre.ToLower() == "fin")
+            if (nombre.ToLower() == "fin") //Usar una palabra para finalizar antes de llegar a 30
                 break;
 
             personas.Enqueue(nombre);
@@ -29,7 +29,7 @@ public class Colas
             System.Console.WriteLine();
         }
 
-        int porAsignar = personas.Count;
+        int porAsignar = 30 - personas.Count;
         System.Console.WriteLine("Quedan " + porAsignar + " asientos por asignar");
 
         cantidadElementos(personas);
@@ -39,7 +39,7 @@ public class Colas
 
     public static void cantidadElementos(Queue<string> cola)
     {
-        System.Console.WriteLine($"Total de personas en la cola: {cola.Count}");
+        System.Console.WriteLine("Existen " + cola.Count + " personas en la cola");
         System.Console.WriteLine();
     }
 
