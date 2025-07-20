@@ -7,6 +7,7 @@ public class Colas
         const int maxAsientos = 30;
 
         System.Console.WriteLine("Simulación automática: Asigación de 30 asientos en orden de llegada.");
+        System.Console.WriteLine();
 
         for (int i = 1; i <= maxAsientos; i++)
         {
@@ -15,6 +16,7 @@ public class Colas
 
         cantidadElementos(personas);
         System.Console.WriteLine("Asignando asientos...");
+        System.Console.WriteLine();
 
         int asiento = 1;
         while (personas.Count > 0)
@@ -31,6 +33,7 @@ public class Colas
     public static void cantidadElementos(Queue<string> cola)
     {
         System.Console.WriteLine($"Total de personas en la cola: {cola.Count}");
+        System.Console.WriteLine();
     }
 
     public static void imprimirCola(Queue<string> cola)
