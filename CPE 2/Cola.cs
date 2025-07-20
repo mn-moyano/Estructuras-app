@@ -22,33 +22,48 @@ public class Colas //Crear la clase colas
             contador++;
         }
 
-        if (personas.Count > 0)
+        System.Console.WriteLine("Iniciando proceso de asignación de asientos...");
+        System.Console.WriteLine();
+
+        while (personas.Count > 0)
         {
-            string atendido = personas.Dequeue();
-            System.Console.WriteLine("Asiento asignado a: " + atendido);
-            System.Console.WriteLine();
+            venta(personas);
+        }
+    }
+
+    public static void venta(Queue<string> cola)
+    {
+        if (cola.Count > 0)
+        {
+            string persona = cola.Dequeue();
+            System.Console.WriteLine($"Asiento asignado a: {persona}");
+            Thread.Sleep(2000); //Espera de 2 segundos
         }
 
-        int porAsignar = 30 - personas.Count;
-        System.Console.WriteLine("Quedan " + porAsignar + " asientos por asignar");
-
-        cantidadElementos(personas);
-        imprimirCola(personas);
-
+        System.Console.WriteLine();
+        cantidadElementos(cola);
+        imprimirCola(cola);
     }
 
     public static void cantidadElementos(Queue<string> cola)
     {
-        System.Console.WriteLine("Existen " + cola.Count + " personas en la cola");
+        System.Console.WriteLine("Existen " + cola.Count + " personas en la cola"); //Cantidad de personas en cola
         System.Console.WriteLine();
     }
 
     public static void imprimirCola(Queue<string> cola)
     {
-        System.Console.WriteLine("Personas restantes en la cola:");
+        if (cola.Count == 0)
+        {
+            System.Console.WriteLine("No hay más personas en la cola");
+            return;
+        }
+
+        System.Console.WriteLine("Personas restantes en la cola:"); //Muestra las personas en la colalo
         foreach (var persona in cola)
         {
-            System.Console.WriteLine(persona);
+            System.Console.WriteLine("- " + persona);
         }
+        System.Console.WriteLine();
     }
 }
