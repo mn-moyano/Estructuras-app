@@ -6,27 +6,34 @@ public class Colas
         Queue<string> personas = new Queue<string>();
         const int maxAsientos = 30;
 
-        System.Console.WriteLine("Simulación automática: Asigación de 30 asientos en orden de llegada.");
-        System.Console.WriteLine();
+        System.Console.WriteLine("Simulación: Asigación de 30 asientos en orden de llegada.");
+        System.Console.WriteLine("Ingrese los nombres de los visitantes en orden de llegada (escriba 'fin' para terminar antes de los 30):");
 
-        for (int i = 1; i <= maxAsientos; i++)
+        int contador = 0;
+        while (contador < maxAsientos)
         {
-            personas.Enqueue("Persona" + i);
+            System.Console.WriteLine($"Visitante #{contador + 1}: ");
+            string nombre = Console.ReadLine();
+
+            if (nombre.ToLower() == "fin")
+                break;
+
+            personas.Enqueue(nombre);
+            contador++;
         }
 
-        cantidadElementos(personas);
-        System.Console.WriteLine("Asignando asientos...");
-        System.Console.WriteLine();
-
-        int asiento = 1;
-        while (personas.Count > 0)
+        if (personas.Count > 0)
         {
             string atendido = personas.Dequeue();
-            System.Console.WriteLine($"Asiento #{asiento} asignado a: {atendido}");
-            asiento++;
+            System.Console.WriteLine("Asiento asignado a: " + atendido);
+            System.Console.WriteLine();
         }
 
-        System.Console.WriteLine("Todos los asientos han sido asignados.");
+        int porAsignar = personas.Count;
+        System.Console.WriteLine("Quedan " + porAsignar + " asientos por asignar");
+
+        cantidadElementos(personas);
+        imprimirCola(personas);
 
     }
 
