@@ -35,6 +35,10 @@ public class Colas
 
     public static void imprimirCola(Queue<string> cola)
     {
-        System.Console.WriteLine("Personas restantes");
+        System.Console.WriteLine("Personas restantes en la cola:");
+        foreach (var persona in cola)
+        {
+            System.Console.WriteLine(persona);
+        }
     }
 }
