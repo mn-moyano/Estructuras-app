@@ -1,2 +1,2 @@
-﻿Console.WriteLine("Universidad Estatal Amazónica");
-vacunas.run(); //Ejecuta el programa
+﻿Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
+vacunas.run();
