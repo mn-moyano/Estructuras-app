@@ -14,5 +14,21 @@ public class ClaveValor
         {
             {1, "Anita"}
         };
+
+        System.Console.WriteLine("--Lista de estudiantes--");
+        System.Console.WriteLine("Ingrese un código: ");
+        int codigo = int.Parse(Console.ReadLine());
+        System.Console.WriteLine("Ingrese el nombre: ");
+        string nombre = Console.ReadLine();
+
+        if (estudiantes.ContainsKey(codigo))
+        {
+            System.Console.WriteLine("El código ya existe");
+        }
+        else
+        {
+            estudiantes.Add(codigo, nombre);
+        }
+        System.Console.WriteLine(estudiantes[4]);
     }
 }
