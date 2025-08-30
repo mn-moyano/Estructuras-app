@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic;
+
 public class ClaveValor
 {
     public static void run()
@@ -21,6 +23,9 @@ public class ClaveValor
         System.Console.WriteLine("Ingrese el nombre: ");
         string nombre = Console.ReadLine();
 
+        estudiantes[1] = "Anita";
+        System.Console.WriteLine(estudiantes[1]);
+
         if (estudiantes.ContainsKey(codigo))
         {
             System.Console.WriteLine("El código ya existe");
@@ -30,5 +35,17 @@ public class ClaveValor
             estudiantes.Add(codigo, nombre);
         }
         System.Console.WriteLine(estudiantes[4]);
+
+        var claves = estudiantes.Keys;
+        var valores = estudiantes.Values;
+
+        foreach (var item in claves)
+        {
+            System.Console.WriteLine(item);
+        }
+        foreach (var item in valores)
+        {
+            System.Console.WriteLine(item);
+        }
     }
 }
