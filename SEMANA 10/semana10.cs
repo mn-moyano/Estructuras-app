@@ -1,4 +1,6 @@
-public class vacunas //Crear la clase vacunas
+using PdfSharpCore.Drawing;
+using PdfSharpCore.Pdf;
+public class Vacunas //Crear la clase vacunas
 {
     public static void run() //Crear un método
     {
@@ -59,6 +61,29 @@ public class vacunas //Crear la clase vacunas
             System.Console.WriteLine(item);
         }
         System.Console.WriteLine("Ciudadanos no vacunados: " + noVacunados.Count);
-    }  
+
+        //Generar el reporte en PDF
+        var document = new PdfDocument();
+        document.Info.Title = "Reporte Vacunas";
+        var page = document.AddPage();
+        var gfx = XGraphics.FromPdfPage(page);
+        var font = new XFont("Verdana", 12, XFontStyle.Regular);
+
+        double y = 40; //Posición vertical inicial
+
+        gfx.DrawString("Reporte de Vacunación", new XFont("Verdana", 16, XFontStyle.Bold), XBrushes.Black, new XPoint(40, y));
+        y += 30;
+        gfx.DrawString($"Pfizer: {soloPfizer.Count}", font, XBrushes.Black, new XPoint(40, y));
+        y += 20;
+        gfx.DrawString($"AstraZeneca: {soloAstrazeneca.Count}", font, XBrushes.Black, new XPoint(40, y));
+        y += 20;
+        gfx.DrawString($"Ambas Dosis: {ambasDosis.Count}", font, XBrushes.Black, new XPoint(40, y));
+        y += 20;
+        gfx.DrawString($"No Vacunados: {noVacunados.Count}", font, XBrushes.Black, new XPoint(40, y));
+        y += 30;
+
+        document.Save("ReporteVacunas.pdf");
+        System.Console.WriteLine("PDF generado correctamente");
+    }
 
 }
