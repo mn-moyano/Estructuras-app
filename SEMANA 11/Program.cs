@@ -1,2 +1,3 @@
 ﻿Console.WriteLine("UNIVERSIDAD ESTATAL AMAZÓNICA");
-ClaveValor.run();
+//ClaveValor.run();
+Traductor.run();
