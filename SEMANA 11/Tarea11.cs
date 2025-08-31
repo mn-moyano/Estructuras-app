@@ -1,8 +1,8 @@
-public class Traductor
+public class Traductor //Crear la clase Traductor
 {
-    public static void run()
+    public static void run() //Crear método
     {
-        Dictionary<string, string> palabras = new Dictionary<string, string>();
+        Dictionary<string, string> palabras = new Dictionary<string, string>(); //Crear diccionario con 10 palabras 
         palabras.Add("tiempo", "time");
         palabras.Add("año", "year");
         palabras.Add("dia", "day");
