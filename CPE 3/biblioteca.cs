@@ -27,7 +27,7 @@ public class Biblioteca //Crear la clase biblioteca
 
             if (opcion == "1")
             {
-                Console.Write("Ingrese el ID del libro a buscar: ");
+                System.Console.WriteLine("Ingrese el ID del libro a buscar: ");
                 int id = int.Parse(Console.ReadLine());
 
                 if (libros.ContainsKey(id))
@@ -41,7 +41,11 @@ public class Biblioteca //Crear la clase biblioteca
             }
             else if (opcion == "2")
             {
-                Console.Write("Ingrese ID del libro: ");
+                System.Console.WriteLine("Ingrese ID del libro: ");
+                int id = int.Parse(Console.ReadLine());
+
+                System.Console.WriteLine("Ingrese título del libro: ");
+                string titulo = Console.ReadLine();
                 
             }
         }
