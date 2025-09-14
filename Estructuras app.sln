@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEMANA 11", "SEMANA 11\SEMA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPE 3", "CPE 3\CPE 3.csproj", "{C29A33FF-C0A1-4818-B7B9-E34A393CD4AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SEMANA 13", "SEMANA 13\SEMANA 13.csproj", "{34606961-0FFD-4806-82B5-0BC951332F20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,18 @@ Global
 		{C29A33FF-C0A1-4818-B7B9-E34A393CD4AB}.Release|x64.Build.0 = Release|Any CPU
 		{C29A33FF-C0A1-4818-B7B9-E34A393CD4AB}.Release|x86.ActiveCfg = Release|Any CPU
 		{C29A33FF-C0A1-4818-B7B9-E34A393CD4AB}.Release|x86.Build.0 = Release|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Debug|x64.Build.0 = Debug|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Debug|x86.Build.0 = Debug|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Release|x64.ActiveCfg = Release|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Release|x64.Build.0 = Release|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Release|x86.ActiveCfg = Release|Any CPU
+		{34606961-0FFD-4806-82B5-0BC951332F20}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
