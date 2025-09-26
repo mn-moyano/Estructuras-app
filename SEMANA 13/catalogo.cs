@@ -1,6 +1,6 @@
-public class Nodo //Almacenará
+public class Nodo //Almacenará un título de revista
 {
-    public string Valor;
+    public string Valor; //Será el título de la revista
     public Nodo Izquierdo;
     public Nodo Derecho;
 
@@ -12,16 +12,16 @@ public class Nodo //Almacenará
     }
 }
 
-public class ArbolBinarioBusqueda
+public class ArbolBinarioBusqueda //Crear el árbol binario de búsqueda
 {
     private Nodo raiz;
 
-    public void Insertar(string valor)
+    public void Insertar(string valor) //Insertar un título en el árbol binario de búsqueda
     {
         raiz = InsertarRecursivo(raiz, valor);
     }
 
-    private Nodo InsertarRecursivo(Nodo nodo, string valor)
+    private Nodo InsertarRecursivo(Nodo nodo, string valor) //Inserción recursiva, es decir, si el nodo es null se crea uno nuevo, sino decide a que rama ir según el alfabeto
     {
         if (nodo == null)
             return new Nodo(valor);
@@ -32,26 +32,26 @@ public class ArbolBinarioBusqueda
         return nodo;
     }
 
-    public bool Buscar(string valor)
+    public bool Buscar(string valor) //Busca un título en el árbol
     {
         return BuscarRecursivo(raiz, valor);
     }
 
     private bool BuscarRecursivo(Nodo nodo, string valor)
     {
-        if (nodo == null)
+        if (nodo == null) //No encontrado
         {
             return false;
         }
-        if (nodo.Valor.Equals(valor, StringComparison.OrdinalIgnoreCase))
+        if (nodo.Valor.Equals(valor, StringComparison.OrdinalIgnoreCase)) //true
         {
             return true;
         }
-        else if (string.Compare(valor, nodo.Valor, true) < 0)
+        else if (string.Compare(valor, nodo.Valor, true) < 0) //buscar en izquierdo
         {
             return BuscarRecursivo(nodo.Izquierdo, valor);
         }
-        else
+        else //Buscar en derecho
         {
             return BuscarRecursivo(nodo.Derecho, valor);
         }
@@ -64,7 +64,7 @@ public class Catalogo //Creamos la clase catálogo
         List<string> revistas = new List<string> { "Forbes", "People", "Time", "Caras", "Vistazo",
             "Nature", "The Economist", "National Geographic", "Chic", "Glow" };//Creamos una lista de revistas
 
-        ArbolBinarioBusqueda arbol = new ArbolBinarioBusqueda();
+        ArbolBinarioBusqueda arbol = new ArbolBinarioBusqueda(); //Construimos el árbol con los títulos del catálogo
 
         foreach (var item in revistas)
         {
@@ -86,7 +86,14 @@ public class Catalogo //Creamos la clase catálogo
                 string titulo = Console.ReadLine();
 
                 bool encontrado = arbol.Buscar(titulo);//Llamamos a la función de búsqueda recursiva
-                System.Console.WriteLine(encontrado ? "Encontrado" : "No encontrado");
+                if (encontrado)
+                {
+                    System.Console.WriteLine("Encontrado");
+                }
+                else
+                {
+                    System.Console.WriteLine("No encontrado");
+                }
             }
             else if (opcion == 0) //Salimos del programa
             {
