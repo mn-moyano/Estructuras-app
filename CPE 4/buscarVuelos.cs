@@ -4,7 +4,7 @@ public class Vuelo //Crear la clase vuelo que contendrá los datos de origen, de
     public string Destino { get; set; }
     public double Precio { get; set; }
 
-    public Vuelo(string origen, string destino, double precio)
+    public Vuelo(string origen, string destino, double precio)//Constructor
     {
         Origen = origen;
         Destino = destino;
@@ -12,21 +12,21 @@ public class Vuelo //Crear la clase vuelo que contendrá los datos de origen, de
     }
 }
 
-public class Grafo //Representar un grafo con lista adyacente 
+public class Grafo //Representar un grafo con disccionario de lista adyacente 
 {
     Dictionary<string, List<Vuelo>> adj = new Dictionary<string, List<Vuelo>>();//Contendrá los vuelos disponibles
 
     public void AgregarVuelo(string origen, string destino, double precio) //Método para agregar los vuelos al grafo
     {
-        if (!adj.ContainsKey(origen))
+        if (!adj.ContainsKey(origen))//Si la ciudad de origen no existe en el diccionario, la creamos
             adj[origen] = new List<Vuelo>();
 
-        adj[origen].Add(new Vuelo(origen, destino, precio));
+        adj[origen].Add(new Vuelo(origen, destino, precio));//Agregamos el nuevo vuelo a la lista de esa ciudad
     }
 
     public Vuelo BuscarVueloMasBarato(string origen, string destino) // Busca en la lista de vuelos, compara los precios y arroja el más barato
     {
-        if (adj.ContainsKey(origen))
+        if (adj.ContainsKey(origen))//Verifica si el origen existe en el grafo
         {
             Vuelo masBarato = null;
             foreach (var vuelo in adj[origen])
